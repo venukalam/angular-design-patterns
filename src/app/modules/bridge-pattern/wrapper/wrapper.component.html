@@ -1,0 +1,47 @@
+<div class="header">
+    <h2>Common Dashboard Wrapper</h2>
+</div>
+<div class="row">
+    <div class="col-sm-2 text-right">
+        <p class="form-control-static">Filter 1 : </p>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <select name="state" id="maxRows" class="form-control" #fitler1>
+                <option value="" disabled>filter 1</option>
+                <option value="option 1">option 1</option>
+                <option value="option 2">option 2</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-2 text-right">
+        <p class="form-control-static">Filter 2 : </p>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <select name="state" id="maxRows" class="form-control" #fitler2>
+                <option value="" disabled>filter 2</option>
+                <option value="option 1">option 1</option>
+                <option value="option 2">option 2</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <button mat-stroked-button (click)="load(fitler1.value,fitler2.value)">Load</button>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <button mat-stroked-button (click)="onRefresh()">Refresh</button>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="col-12">
+        <ng-content></ng-content> <!-- dynamic cotent -->
+    </div>
+</section>
+<div class="footer">
+    <p>Common Dashboard Wrapper ends</p>
+</div>
